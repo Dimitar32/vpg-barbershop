@@ -10,8 +10,8 @@ const Header = () => (
     <nav>
       <ul>
         <li><Link to="/">Начало</Link></li>
-        <li><Link to="/reservation">Резервации</Link></li>
-        <li><Link to="/contact">Контакти</Link></li>
+        <li><Link to="/reservation">Запази час</Link></li>
+        {/* <li><Link to="/contact">Контакти</Link></li> */}
       </ul>
     </nav>
   </header>

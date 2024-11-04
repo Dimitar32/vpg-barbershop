@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a; /* Тъмно сиво/черно */
+    color: #fff;
+  }
+  
+  .header .logo h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .header nav ul li a:hover {
+    color: #e63946; /* Акцентен червен цвят */
+  }
+  
+  .btn-appointment {
+    background-color: #e63946; /* Червен бутон */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-appointment:hover {
+    background-color: #ff4d4d; /* Леко по-светъл нюанс за ефект при ховър */
+  }
+  
