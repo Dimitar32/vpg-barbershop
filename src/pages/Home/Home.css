@@ -183,7 +183,7 @@
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   .homewatermarkphoto {
-    height: 60vh; /* Reduce height on mobile */
+    height: 70vh; /* Reduce height on mobile */
   }
 
   .insidehomewatermarkphoto h1 {
