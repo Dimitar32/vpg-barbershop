@@ -1,69 +1,80 @@
+/* Main container styling */
 .home {
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: #fff;
-    background-color: #1a1a1a; /* Тъмно сив фон */
-  }
-  
-  .home h1 {
-    font-size: 2.5rem;
-    color: #e63946; /* Червен акцентен цвят */
-    margin-bottom: 20px;
-  }
-  
-  .home p {
-    font-size: 1.1rem;
-    color: #d1d1d1; /* Светло сиво за текст */
-    line-height: 1.6;
-  }
-  
-  .cta {
-    margin: 30px 0;
-  }
-  
-  .cta h2 {
-    color: #fff;
-  }
-  
-  .btn-reservation {
-    background-color: #e63946; /* Червен бутон */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-reservation:hover {
-    background-color: #ff4d4d; /* По-светъл червен нюанс */
-  }
-  
-  .services, .about {
-    margin-top: 50px;
-  }
-  
-  .services h2, .about h2 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-  
-  .services ul {
-    list-style-type: none;
-    padding: 0;
-    color: #d1d1d1; /* Светло сиво */
-  }
-  
-  .services li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-  }
-  
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #fff;
+  background-color: #1a1a1a;
+}
 
-/* Стилизация за секцията "Нашите бръснари" */
+/* Title styling with red accent color */
+.home h1 {
+  font-size: 2.5rem;
+  color: #e63946;
+  margin-bottom: 20px;
+  padding-bottom: 80px;
+}
+
+/* Text color and spacing for better readability */
+.home p {
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+/* Call-to-action section styling */
+.cta {
+  margin: 30px 0;
+}
+
+/* CTA title color */
+.cta h2 {
+  /* padding-top: 30px; */
+  color: #fff;
+}
+
+/* Button styling with transition effect */
+.btn-reservation {
+  background-color: #e63946;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.btn-reservation:hover {
+  background-color: #ff4d4d;
+}
+
+/* Section styling for services and about us */
+.services, .about {
+  margin-top: 50px;
+}
+
+/* Headings in services and about us sections */
+.services h2, .about h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Styling for services list items */
+.services ul {
+  list-style-type: none;
+  padding: 0;
+  color: #d1d1d1;
+}
+
+.services li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Barbers section with flex layout */
 .barbers {
   margin-top: 50px;
   text-align: center;
@@ -75,6 +86,7 @@
   margin-bottom: 20px;
 }
 
+/* Flexbox styling for the barber list */
 .barber-list {
   display: flex;
   justify-content: center;
@@ -82,6 +94,7 @@
   flex-wrap: wrap;
 }
 
+/* Individual barber card styling */
 .barber {
   background-color: #333;
   padding: 20px;
@@ -89,14 +102,16 @@
   width: 250px;
   color: #d1d1d1;
   text-align: center;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
 
-.barber:hover{
-  transform: rotate(+1deg) scale(1.05);
-  transition-duration: 0.5s;
+/* Hover effect for barber cards */
+.barber:hover {
+  transform: rotate(1deg) scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for barber photos */
 .barber-photo {
   width: 100%;
   border-radius: 40%;
@@ -104,7 +119,7 @@
 }
 
 .barber h3 {
-  color: #e63946; /* Червен акцентен цвят */
+  color: #e63946;
   font-size: 1.5rem;
   margin: 10px 0;
 }
@@ -115,43 +130,67 @@
   color: #d1d1d1;
 }
 
+/* Background image container with overlay */
+.homewatermarkphoto {
+  background-image: url('./barberPhoto.jpeg'); /* Background image */
+  background-size: cover; /* Cover entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+/* Semi-transparent overlay over the background image */
+.homewatermarkphoto::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* 50% black overlay */
+  z-index: 1;
+}
+
+/* Ensures text appears above the overlay */
+.insidehomewatermarkphoto {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Text styling inside overlay section */
+.insidehomewatermarkphoto h1 {
+  font-size: 2.5rem;
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+.insidehomewatermarkphoto p {
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
-  .homewatermarkphoto{
-    background-image: url('./barberPhoto.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden; 
-    background-blend-mode: darken;
-  } 
-/*   
-  .homewatermarkphoto::after{
+  .homewatermarkphoto {
+    height: 60vh; /* Reduce height on mobile */
+  }
 
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 95%;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.7
-      ); 
-      z-index: 1;
-    }
+  .insidehomewatermarkphoto h1 {
+    font-size: 1.8rem; /* Smaller title on mobile */
+  }
 
-    .homewatermarkphoto h1 {
-      font-size: 2.5rem;
-      color: #e63946; 
-      margin-bottom: 20px;
-    }
-    
-    .homewatermarkphoto p {
-      font-size: 1.1rem;
-      color: #d1d1d1; 
-      line-height: 1.6;
-    } */
-    
+  .insidehomewatermarkphoto p {
+    font-size: 1rem; /* Smaller text on mobile */
+  }
 }
