@@ -1,8 +1,30 @@
 import React from 'react';
+import Velizar from '../Home/Velizar.jpg';
+import Plamen from '../Home/PlamenGanev.jpg';
 import { Link } from 'react-router-dom';
 import './Home.css'
 
-const Home = () => (
+
+
+const Home = () => {
+  const barbers = [
+    {
+      id: 1,
+      name: 'Велизар Ганев',
+      age: 23,
+      description: 'С повече от 10 години опит, Зарко е майстор на класическото подстригване и оформянето на брада.',
+      image: Velizar, // Път към изображението
+    },
+    {
+      id: 2,
+      name: 'Пламен Ганев',
+      age: 21,
+      description: 'Пацо е специалист в модерните стилове и обръща внимание на детайлите за перфектния завършек.',
+      image: Plamen, // Път към изображението
+    },
+  ];
+  
+  return (
   <div className="home">
     <h1>Добре дошли в нашата бръснарница!</h1>
     <p>Ние предлагаме качествени услуги за подстригване и оформяне на брада, с внимание към детайла и професионализъм.</p>
@@ -23,11 +45,28 @@ const Home = () => (
       </ul>
     </section>
 
+    {/* Динамична секция "Нашите бръснари" */}
+    <section className="barbers">
+        <h2>Нашите бръснари</h2>
+        <div className="barber-list">
+          {barbers.map((barber) => (
+            <div key={barber.id} className="barber">
+              <img src={barber.image} alt={barber.name} className="barber-photo" />
+              <h3>{barber.name}</h3>
+              <p>{barber.age} години</p>
+              <p>{barber.description}</p>
+            </div>
+          ))}
+        </div>
+    </section>
+
+
     <section className="about">
       <h2>За нас</h2>
       <p>С години опит и страст към занаята, ние се стремим да предложим най-доброто обслужване за нашите клиенти. Нашият екип е професионален и посветен на качеството и удовлетвореността на клиента.</p>
     </section>
   </div>
-);
+  );
+};
 
 export default Home;

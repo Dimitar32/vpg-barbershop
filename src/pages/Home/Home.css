@@ -61,3 +61,55 @@
     margin: 10px 0;
   }
   
+
+/* Стилизация за секцията "Нашите бръснари" */
+.barbers {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.barbers h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.barber-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.barber {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  color: #d1d1d1;
+  text-align: center;
+}
+
+.barber:hover{
+  transform: rotate(+1deg) scale(1.05);
+  transition-duration: 0.5s;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.barber-photo {
+  width: 100%;
+  border-radius: 40%;
+  margin-bottom: 15px;
+}
+
+.barber h3 {
+  color: #e63946; /* Червен акцентен цвят */
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.barber p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #d1d1d1;
+}
