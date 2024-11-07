@@ -1,6 +1,7 @@
 .home {
     text-align: center;
-    padding: 40px 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     color: #fff;
     background-color: #1a1a1a; /* Тъмно сив фон */
   }
@@ -112,4 +113,45 @@
   margin: 5px 0;
   font-size: 1rem;
   color: #d1d1d1;
+}
+
+@media (max-width: 600px) {
+  .homewatermarkphoto{
+    background-image: url('./barberPhoto.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; 
+    background-blend-mode: darken;
+  } 
+  
+  .homewatermarkphoto::after{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.7
+      ); /* Dark overlay for better text readability */
+      z-index: 1;
+    }
+
+    .homewatermarkphoto h1 {
+      font-size: 2.5rem;
+      color: #e63946; /* Червен акцентен цвят */
+      margin-bottom: 20px;
+    }
+    
+    .homewatermarkphoto p {
+      font-size: 1.1rem;
+      color: #d1d1d1; /* Светло сиво за текст */
+      line-height: 1.6;
+    }
+    
 }
