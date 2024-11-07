@@ -11,7 +11,8 @@
     font-size: 1.5rem;
     color: #fff;
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
   }
   
   .header nav ul {
