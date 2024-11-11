@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from 'react-slick';
 import Velizar from '../Home/Velizar.jpg';
 import Plamen from '../Home/PlamenGanev.jpg';
 import { Link } from 'react-router-dom';
@@ -23,7 +24,29 @@ const Home = () => {
       image: Plamen, // Път към изображението
     },
   ];
-  
+
+  const customers = [
+    {
+      id: 1,
+      image: Velizar, // Път към снимка на доволен клиент
+    },
+    {
+      id: 2,
+      image: Plamen, // Път към снимка на доволен клиент
+    },
+    // Добави още снимки на клиенти тук
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
   return (
   <div className="home">
     
@@ -66,6 +89,18 @@ const Home = () => {
         </div>
     </section>
 
+    {/* Секция "Доволни клиенти" със само снимки */}
+    <section className="testimonials">
+        <h2>Доволни клиенти</h2>
+        <div className="testimonial-list">
+        {/* <Slider {...settings} className=""> */}
+
+          {customers.map((customer) => (
+            <img key={customer.id} src={customer.image} alt="Доволен клиент" className="customer-photo" />
+          ))}
+        {/* </Slider> */}
+        </div>
+    </section>
 
     <section className="about">
       <h2>За нас</h2>

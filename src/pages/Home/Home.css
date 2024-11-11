@@ -180,6 +180,44 @@
   line-height: 1.6;
 }
 
+.testimonials {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.customer-photo {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.customer-photo:hover {
+  transform: scale(1.05);
+}
+
+.storyCarousel img {
+  width: 60%; /* Make images smaller */
+  margin: 0 auto; /* Center images */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Smaller box shadow */
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   .homewatermarkphoto {
