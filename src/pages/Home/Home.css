@@ -218,6 +218,19 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Smaller box shadow */
 }
 
+.home h2{
+  color: #e63946;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+.homewatermarkphoto h2:hover {
+  transform: scale(1.1);
+  text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
+}  
+
+
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   .homewatermarkphoto {
