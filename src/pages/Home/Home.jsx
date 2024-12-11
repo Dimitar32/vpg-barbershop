@@ -5,8 +5,6 @@ import Plamen from '../Home/PlamenGanev.jpg';
 import { Link } from 'react-router-dom';
 import './Home.css'
 
-
-
 const Home = () => {
   const barbers = [
     {
