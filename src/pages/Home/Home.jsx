@@ -1,6 +1,6 @@
 import React from 'react';
 // import Slider from 'react-slick';
-import Velizar from '../Home/Velizar.jpg';
+import Velizar from '../Home/velizar.jpg';
 import Plamen from '../Home/PlamenGanev.jpg';
 import { Link } from 'react-router-dom';
 import './Home.css'
