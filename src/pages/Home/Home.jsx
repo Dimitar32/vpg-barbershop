@@ -1,56 +1,54 @@
 import React from 'react';
-// import Slider from 'react-slick';
 import Velizar from '../Home/Velizar.jpg';
 import Plamen from '../Home/PlamenGanev.jpg';
 import { InlineWidget } from 'react-calendly';
 import { Link as ScrollLink } from 'react-scroll';
 import './Home.css'
 
+// Helper function to calculate age
+const calculateAge = (birthDate) => {
+  const today = new Date();
+  const birth = new Date(birthDate);
+  let age = today.getFullYear() - birth.getFullYear();
+  const monthDiff = today.getMonth() - birth.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
+  return age;
+};
 
 const Home = () => {
   const barbers = [
     {
       id: 1,
       name: 'Велизар Ганев',
-      age: 23,
+      birthDate: '2001-04-05',
       description: 'С повече от 10 години опит, Зарко е майстор на класическото подстригване и оформянето на брада.',
-      image: Velizar, // Път към изображението
+      image: Velizar, 
     },
     {
       id: 2,
       name: 'Пламен Ганев',
-      age: 21,
+      birthDate: '2003-01-22',
       description: 'Пацо е специалист в модерните стилове и обръща внимание на детайлите за перфектния завършек.',
-      image: Plamen, // Път към изображението
+      image: Plamen, 
     },
   ];
 
   const customers = [
     {
       id: 1,
-      image: Velizar, // Път към снимка на доволен клиент
+      image: Velizar, 
     },
     {
       id: 2,
-      image: Plamen, // Път към снимка на доволен клиент
-    },
-    // Добави още снимки на клиенти тук
+      image: Plamen, 
+    }
   ];
-
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  // };
 
   return (
   <div className="home">
     
-    {/* Main background section with overlay text and CTA button */}
     <section className='homewatermarkphoto'>
       <div className='insidehomewatermarkphoto'>
         <h1>Добре дошли в нашата бръснарница!</h1>
@@ -82,7 +80,6 @@ const Home = () => {
         />
     </section>
 
-    {/* Динамична секция "Нашите бръснари" */}
     <section className="barbers">
         <h2>Нашите бръснари</h2>
         <div className="barber-list">
@@ -90,7 +87,7 @@ const Home = () => {
             <div key={barber.id} className="barber">
               <img src={barber.image} alt={barber.name} className="barber-photo" />
               <h3>{barber.name}</h3>
-              <p>{barber.age} години</p>
+              <p>{calculateAge(barber.birthDate)} години</p>
               <p>{barber.description}</p>
             </div>
           ))}
