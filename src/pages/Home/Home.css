@@ -1,7 +1,6 @@
 /* Main container styling */
 .home {
   text-align: center;
-  /* padding-top: 40px; */
   padding-bottom: 40px;
   color: #fff;
   background-color: #1a1a1a;
@@ -12,7 +11,6 @@
   font-size: 2.5rem;
   color: #e63946;
   margin-bottom: 20px;
-  padding-bottom: 80px;
 }
 
 /* Text color and spacing for better readability */
@@ -29,7 +27,6 @@
 
 /* CTA title color */
 .cta h2 {
-  /* padding-top: 30px; */
   color: #fff;
 }
 
@@ -50,19 +47,17 @@
   background-color: #ff4d4d;
 }
 
-/* Section styling for services and about us */
-.services, .about {
+/* Section styling for services */
+.services {
   margin-top: 50px;
 }
 
-/* Headings in services and about us sections */
-.services h2, .about h2 {
+.services h2 {
   color: #fff;
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
-/* Styling for services list items */
 .services ul {
   list-style-type: none;
   padding: 0;
@@ -86,7 +81,6 @@
   margin-bottom: 20px;
 }
 
-/* Flexbox styling for the barber list */
 .barber-list {
   display: flex;
   justify-content: center;
@@ -94,7 +88,6 @@
   flex-wrap: wrap;
 }
 
-/* Individual barber card styling */
 .barber {
   background-color: #333;
   padding: 20px;
@@ -105,13 +98,11 @@
   transition: transform 0.5s, box-shadow 0.5s;
 }
 
-/* Hover effect for barber cards */
 .barber:hover {
   transform: rotate(1deg) scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling for barber photos */
 .barber-photo {
   width: 100%;
   border-radius: 40%;
@@ -132,8 +123,8 @@
 
 /* Background image container with overlay */
 .homewatermarkphoto {
-  background-image: url('./barberPhoto.jpeg'); /* Background image */
-  background-size: cover; /* Cover entire container */
+  background-image: url('./barberPhoto.jpeg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 90vh;
@@ -146,7 +137,6 @@
   overflow: hidden;
 }
 
-/* Semi-transparent overlay over the background image */
 .homewatermarkphoto::after {
   content: '';
   position: absolute;
@@ -154,11 +144,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
-/* Ensures text appears above the overlay */
 .insidehomewatermarkphoto {
   position: relative;
   z-index: 2;
@@ -167,7 +156,6 @@
   padding: 20px;
 }
 
-/* Text styling inside overlay section */
 .insidehomewatermarkphoto h1 {
   font-size: 2.5rem;
   color: #e63946;
@@ -180,6 +168,7 @@
   line-height: 1.6;
 }
 
+/* Testimonials section */
 .testimonials {
   margin-top: 50px;
   text-align: center;
@@ -211,37 +200,34 @@
   transform: scale(1.05);
 }
 
-.storyCarousel img {
-  width: 60%; /* Make images smaller */
-  margin: 0 auto; /* Center images */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Smaller box shadow */
+/* About section */
+.about {
+  margin-top: 50px;
 }
 
-.home h2{
-  color: #e63946;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+.about h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
-.homewatermarkphoto h2:hover {
-  transform: scale(1.1);
-  text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
-}  
-
-
+.about p {
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   .homewatermarkphoto {
-    height: 70vh; /* Reduce height on mobile */
+    height: 70vh;
   }
 
   .insidehomewatermarkphoto h1 {
-    font-size: 1.8rem; /* Smaller title on mobile */
+    font-size: 1.8rem;
   }
 
   .insidehomewatermarkphoto p {
-    font-size: 1rem; /* Smaller text on mobile */
+    font-size: 1rem;
   }
 }
