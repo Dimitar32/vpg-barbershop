@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import './Header.css';
+
 
 const Header = () => (
   <header className="header">
@@ -9,9 +10,16 @@ const Header = () => (
     </div>
     <nav>
       <ul>
-        <li><Link to="/">Начало</Link></li>
-        <li><Link to="/reservation">Запази час</Link></li>
-        {/* <li><Link to="/contact">Контакти</Link></li> */}
+        {/* <li>
+            <ScrollLink to="/" smooth={true} duration={500}>
+              Начало
+            </ScrollLink>
+        </li> */}
+        <li>
+            <ScrollLink to="reservation" smooth={true} duration={500}>
+              Запази час
+            </ScrollLink>
+        </li>
       </ul>
     </nav>
   </header>
